@@ -23,3 +23,10 @@ this project exists to better explore what those abstractions are doing.
 - Screen-space interpolation
 
 Future goals are to continue to clean this up and add additional features to test different techniques.
+
+<p align="center">
+<img width="746" height="498" alt="{718117D8-EFF3-4E2A-9D48-9B6836456D50}" src="https://github.com/user-attachments/assets/05b4c7dd-6277-44f8-b72b-2f0398fc2a69" />
+</p>
+
+Reading in a simple .obj model (verts and faces) and the diffuse out of the .mtl file working.
+I also added edge drawing (future will removing inner edges of coplaner faces)
