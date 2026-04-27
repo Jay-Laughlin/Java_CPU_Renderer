@@ -1,5 +1,7 @@
 # Java_CPU_Renderer
-<img width="996" height="742" alt="image" src="https://github.com/user-attachments/assets/de22605f-0d8a-4c96-81cf-718362b5d29e" />
+<p align="center">
+  <img width="600" height="500" alt="image" src="https://github.com/user-attachments/assets/de22605f-0d8a-4c96-81cf-718362b5d29e" />
+</p>
 
 This project is a CPU-based software renderer created as a learning and teaching tool
 to explore the mathematics and systems underlying real-time rendering.
