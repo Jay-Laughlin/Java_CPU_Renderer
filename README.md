@@ -35,3 +35,9 @@ I also added edge drawing (future will removing inner edges of coplaner faces)
 <img width="644" height="468" alt="{63AD299C-894E-49AA-BB93-F694535E201D}" src="https://github.com/user-attachments/assets/0c2c6db4-f1b9-4edd-b18b-c44a62bb48d6" />
 </p>
 Added an edge class to classify edges - now coplaner edges are not drawn (I'll add a wireframe mode for rendering that will have the option to draw them then)
+
+Added Render Modes - so now wireframe rendering is an option:
+<p align="center">
+<img width="481" height="361" alt="{BB58F9BB-E754-483D-AD96-3F0BFF699389}" src="https://github.com/user-attachments/assets/97ba4a8d-9a28-4108-b98e-c71b69b5c475" />
+</p>
+
