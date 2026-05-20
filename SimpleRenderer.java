@@ -20,10 +20,16 @@ import java.util.Map;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+enum RenderMode
+{
+	Normal,
+	Wireframe,		//only sharp edges
+	Wireframe_full, //with coplaner edges
+}
+
 public class SimpleRenderer
 {
 	public static final int WIDTH = 1000, HEIGHT = 700;
-
 	public static Model createHardCodedModel()
 	{
 		Model cube = new Model();
@@ -178,6 +184,7 @@ public class SimpleRenderer
 
 class RenderPanel extends JPanel
 {
+	public static RenderMode renderMode = RenderMode.Wireframe;
 	static final Vector3D origin = new Vector3D(0f, 0f, 0f);
 	private ArrayList<Model> renderList = new ArrayList<>();
 	public static final float speed = .05f;
@@ -311,7 +318,8 @@ class RenderPanel extends JPanel
 		for (Model m : renderList)
 		{
 			m.projectVertices(camera, 1000, 700);
-
+			
+			if (renderMode == RenderMode.Normal)
 			for (Model.Triangle tri : m.getTris())
 			{
 				// backface culling
@@ -374,10 +382,16 @@ class RenderPanel extends JPanel
 					//p2->p3
 					//p3->p1
 			}
-			int edgeColor = 0xFF000000;
+			
+			int edgeColor;
+			if (renderMode == RenderMode.Normal)
+				edgeColor = 0xFF000000;
+			else
+				edgeColor = 0xFFFFFFFF;
+			
 			for (Model.EdgeData edge : m.edgeMap.values())
 			{
-				if (!edge.isSharp)
+				if (!edge.isSharp && renderMode != RenderMode.Wireframe_full)
 					continue;
 
 			    Vector3D pA = m.projectedVerts.get(edge.v0);
