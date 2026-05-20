@@ -30,3 +30,8 @@ Future goals are to continue to clean this up and add additional features to tes
 
 Reading in a simple .obj model (verts and faces) and the diffuse out of the .mtl file working.
 I also added edge drawing (future will removing inner edges of coplaner faces)
+
+<p align="center">
+<img width="644" height="468" alt="{63AD299C-894E-49AA-BB93-F694535E201D}" src="https://github.com/user-attachments/assets/0c2c6db4-f1b9-4edd-b18b-c44a62bb48d6" />
+</p>
+Added an edge class to classify edges - now coplaner edges are not drawn (I'll add a wireframe mode for rendering that will have the option to draw them then)
